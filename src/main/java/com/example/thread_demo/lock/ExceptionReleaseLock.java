@@ -1,6 +1,4 @@
-package com.example.thread_demo.syc;
-
-import lombok.Data;
+package com.example.thread_demo.lock;
 
 //出現異常 鎖釋放
 public class ExceptionReleaseLock {
