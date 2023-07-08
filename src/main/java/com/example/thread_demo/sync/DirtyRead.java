@@ -1,4 +1,4 @@
-package com.example.thread_demo.syc;
+package com.example.thread_demo.sync;
 
 public class DirtyRead {
 

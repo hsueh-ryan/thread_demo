@@ -1,7 +1,7 @@
 package com.example.thread_demo.extend_syc;
 
 //繼承環境的重入鎖
-public class ExtendRecursionSyc {
+public class ExtendRecursionSync {
     public static void main(String[] args) {
         Thread thread = new Thread(() -> {
             Child child = new Child();

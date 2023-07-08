@@ -1,6 +1,6 @@
-package com.example.thread_demo.syc;
+package com.example.thread_demo.sync;
 
-public class SycTest {
+public class SyncTest {
 
     public static void main(String[] args) {
         MyObject myObject = new MyObject();

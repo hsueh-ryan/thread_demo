@@ -1,9 +1,9 @@
-package com.example.thread_demo.syc;
+package com.example.thread_demo.sync;
 
 /**
  * 重入鎖
  */
-public class RecursionSyc {
+public class RecursionSync {
 
     public static void main(String[] args) {
         Service service = new Service();
