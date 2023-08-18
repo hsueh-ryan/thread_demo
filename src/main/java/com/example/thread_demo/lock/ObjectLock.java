@@ -28,25 +28,26 @@ public class ObjectLock {
 
         threadB.setName("B");
         threadB.start();
-
     }
-}
 
-class Service3{
-    private String username;
-    private String password;
+    static class Service3{
+        private String username;
+        private String password;
 
-    //可以透過其他物件當成鎖,不一定要透過this物件
-    private String anyString = new String();
+        //可以透過其他物件當成鎖,不一定要透過this物件
+        private String anyString = new String();
 
-    public void setUsernamePassword(String username,String password) throws InterruptedException {
-        synchronized (anyString){
-            System.out.println("ThreadName" + Thread.currentThread().getName()+System.currentTimeMillis()+"enter");
-            Thread.sleep(3000);
-            this.username = username;
-            this.password = password;
-            System.out.println("ThreadName" + Thread.currentThread().getName()+System.currentTimeMillis()+"exit");
+        public void setUsernamePassword(String username,String password) throws InterruptedException {
+            synchronized (anyString){
+                System.out.println("ThreadName" + Thread.currentThread().getName()+System.currentTimeMillis()+"enter");
+                Thread.sleep(3000);
+                this.username = username;
+                this.password = password;
+                System.out.println("ThreadName" + Thread.currentThread().getName()+System.currentTimeMillis()+"exit");
+            }
         }
     }
 }
+
+
 

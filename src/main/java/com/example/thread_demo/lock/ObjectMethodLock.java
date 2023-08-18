@@ -25,18 +25,17 @@ public class ObjectMethodLock {
 
         threadB.setName("b");
         threadB.start();
-
     }
 
-
-}
-
-class Service4{
-    public void testMethod(MyLock myLock) throws InterruptedException {
-        synchronized (myLock){
-            System.out.println("testMethod getLock time = "+System.currentTimeMillis()+"threadName " + Thread.currentThread().getName());
-            Thread.sleep(5000);
-            System.out.println("testMethod releaseLock time = "+System.currentTimeMillis()+"threadName " + Thread.currentThread().getName());
+    static class Service4{
+        public void testMethod(MyLock myLock) throws InterruptedException {
+            synchronized (myLock){
+                System.out.println("testMethod getLock time = "+System.currentTimeMillis()+"threadName " + Thread.currentThread().getName());
+                Thread.sleep(5000);
+                System.out.println("testMethod releaseLock time = "+System.currentTimeMillis()+"threadName " + Thread.currentThread().getName());
+            }
         }
     }
+
+
 }

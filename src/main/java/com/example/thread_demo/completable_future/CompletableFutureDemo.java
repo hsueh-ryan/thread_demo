@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class CompletableFutureTest {
+public class CompletableFutureDemo {
 
     private static ExecutorService executor = Executors.newFixedThreadPool(3);
 
@@ -21,6 +21,8 @@ public class CompletableFutureTest {
             System.out.println(Thread.currentThread().getName() + "拋出異常");
             throw new RuntimeException("發生異常");
         });
+
+
 
         future.whenComplete((unused, throwable) ->
                 System.out.println(Thread.currentThread().getName() + "執行完成"));
