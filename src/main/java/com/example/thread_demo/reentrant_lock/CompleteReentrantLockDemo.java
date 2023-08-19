@@ -1,4 +1,4 @@
-package com.example.thread_demo.lock;
+package com.example.thread_demo.reentrant_lock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -30,7 +30,7 @@ public class CompleteReentrantLockDemo {
 
 
     static class MyService {
-        private Lock lock = new ReentrantLock();
+        private final Lock lock = new ReentrantLock();
 
         public void MethodA() {
             try {
